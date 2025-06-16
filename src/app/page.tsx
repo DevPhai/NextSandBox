@@ -6,12 +6,13 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           src={
-            "https://cdn-uat.rocketskill.co/rocket_skill/Trends/ShortVideos/cover/51025d562b1c815af697e109c99975d9a6.jpg"
+            "https://cdn-uat.rocketskill.co/rocket_skill/Trends/ShortVideos/cover/8c6736a31f1a75f24110d4266430ed29c.png"
           }
           alt={"ShortVideos"}
           width={302}
           height={553}
           style={{ borderRadius: 16, objectFit: "cover" }}
+          priority={true}
         />
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
