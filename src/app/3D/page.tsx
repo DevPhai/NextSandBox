@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Threed() {
   return (
     <>
-      <h1>HOME</h1>
+      <h1>3D Page</h1>
       <Image
         src={"/image/NSB_mockup.png"}
         alt={"well com"}

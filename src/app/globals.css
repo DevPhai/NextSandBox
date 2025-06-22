@@ -48,8 +48,8 @@ body {
 .navigation li {
   position: relative;
   list-style: none;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 50px;
   display: flex;
   justify-content: center;
   margin: 0 5px;
@@ -59,7 +59,7 @@ body {
   content: '';
   position: absolute;
   top: calc(50% - 2.5px);
-  left: 20px;
+  left: 30px;
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -68,13 +68,13 @@ body {
 }
 
 .navigation li.active::before {
-  background: #0f0;
-  box-shadow: 0 0 5px #0f0,
-    0 0 10px #0f0,
-    0 0 20px #0f0,
-    0 0 30px #0f0,
-    0 0 40px #0f0,
-    0 0 50px #0f0;
+  background:  #29fd53;
+  box-shadow: 0 0 5px  #29fd53,
+    0 0 10px  #29fd53,
+    0 0 20px  #29fd53,
+    0 0 30px  #29fd53,
+    0 0 40px  #29fd53,
+    0 0 50px  #29fd53;
 
 }
 
@@ -90,9 +90,9 @@ body {
 
 .navigation li div .icon {
   position: absolute;
-  font-size: 1.75em;
-  width: 80px;
-  height: 80px;
+  font-size: 1em;
+  width: 60px;
+  height: 60px;
   color: #aaa;
   border-radius: 50%;
   display: flex;
@@ -104,8 +104,7 @@ body {
 }
 
 .navigation li div .icon svg {
-z-index: 99;
-
+  z-index: 99;
 }
 
 .navigation li:hover div .icon {
@@ -114,7 +113,7 @@ z-index: 99;
 
 .navigation li.active div .icon {
   transform: translateX(45px);
-  background: #29fd53;
+  background:  #29fd53;
   color: #ffffff;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25),
     inset 2px 2px 3px rgba(255, 255, 255, 0.25),
@@ -142,7 +141,8 @@ z-index: 99;
 .navigation li div .text {
   position: absolute;
   left: 80px;
-  font-size: 1.25em;
+  font-size: 1em;
+  font-weight: 700;
   background: #29fd53;
   color: #2f363e;
   padding: 4px 15px;
@@ -169,13 +169,15 @@ z-index: 99;
 }
 
 .navigation li:hover div .text {
-  left: 100px;
+  left: 80px;
   opacity: 1;
   visibility: visible;
 }
 
 .navigation li.active:hover div .text {
-  left: 140px;
+  left: 130px;
   opacity: 1;
   visibility: visible;
 }
+
+
