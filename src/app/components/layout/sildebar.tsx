@@ -6,15 +6,34 @@ import {
   IoHomeOutline,
   IoCubeOutline,
   IoColorFillOutline,
+  IoGameControllerOutline,
+  IoTodayOutline,
 } from "react-icons/io5";
 
 const SidebarMenu = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   const menuItems = [
-    { icon: <IoHomeOutline />, text: "Home", link: "/" },
-    { icon: <IoColorFillOutline />, text: "CSS", link: "/css" },
-    { icon: <IoCubeOutline />, text: "3D", link: "/3D" },
+    { icon: <IoHomeOutline />, text: "Home", link: "/", order: "order-1" },
+    {
+      icon: <IoColorFillOutline />,
+      text: "CSS",
+      link: "/css",
+      order: "order-2",
+    },
+    { icon: <IoCubeOutline />, text: "3D", link: "/3D", order: "order-3" },
+    {
+      icon: <IoGameControllerOutline />,
+      text: "Game",
+      link: "/Game",
+      order: "order-4",
+    },
+    {
+      icon: <IoTodayOutline />,
+      text: "Todo",
+      link: "/Todo",
+      order: "order-4",
+    },
   ];
 
   return (
@@ -23,7 +42,7 @@ const SidebarMenu = () => {
         <Link
           key={index}
           href={item.link}
-          className={activeIndex === index ? "order-1" : "order-2"}
+          className={activeIndex === index ? "order-1" : item.order}
         >
           <motion.li
             layout
