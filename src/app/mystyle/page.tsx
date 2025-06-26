@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-export default function Threed() {
+export default function Mystyle() {
   return (
     <>
       <div className="loader">
-        <div data-glitch="จุ๊กกรู๊ว..." className="glitch">
-          3D
+        <div data-glitch="ฮั่นแน่..." className="glitch">
+          My Style
         </div>
       </div>
       <div className="glass-frost mt-6">

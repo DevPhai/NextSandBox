@@ -17,14 +17,14 @@ const SidebarMenu = () => {
     { icon: <IoHomeOutline />, text: "Home", link: "/", order: "order-1" },
     {
       icon: <IoColorFillOutline />,
-      text: "CSS",
-      link: "/css",
+      text: "MyStyle",
+      link: "/mystyle",
       order: "order-2",
     },
     { icon: <IoCubeOutline />, text: "3D", link: "/3D", order: "order-3" },
     {
       icon: <IoGameControllerOutline />,
-      text: "Game",
+      text: "Games",
       link: "/Game",
       order: "order-4",
     },
