@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SidebarMenu from "./components/layout/sildebar";
+import ResponsiveAppBar from "./components/layout/appbar";
+import { Container } from "@mui/material";
+import { Padding } from "@mui/icons-material";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,15 +34,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SidebarMenu />
-        <div
-          className="@container logoBG"
-          style={{
-            padding: "4rem 4rem 4rem 9rem",
-          }}
-        >
+        <ResponsiveAppBar />
+        <Container maxWidth="xl" sx={{ padding: "1.75rem" }}>
           {children}
-        </div>
+        </Container>
       </body>
     </html>
   );

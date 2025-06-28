@@ -8,7 +8,7 @@ export default function Home() {
           Home Page ...
         </div>
       </div>
-      <div className="glass-frost mt-6">
+      <div className="glass-frost mt-6 BG">
         <Image
           src={"/image/NSB_mockup.png"}
           alt={"well com"}
