@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import { MatchHistory, Player } from "../components/types/types";
+
+import { Player } from "../components/types/types";
 
 const initPlayer: Player[] = [
   {
@@ -77,12 +77,12 @@ const initPlayer: Player[] = [
   },
 ];
 
-function shuffle<T>(arr: T[]): T[] {
-  return [...arr]
-    .map((v) => [v, Math.random()] as [T, number])
-    .sort((a, b) => a[1] - b[1])
-    .map(([v]) => v);
-}
+// function shuffle<T>(arr: T[]): T[] {
+//   return [...arr]
+//     .map((v) => [v, Math.random()] as [T, number])
+//     .sort((a, b) => a[1] - b[1])
+//     .map(([v]) => v);
+// }
 
 export default function Gwan() {
   return (
