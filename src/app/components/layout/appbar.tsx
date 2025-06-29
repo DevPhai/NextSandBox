@@ -13,6 +13,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
+import { deepOrange } from "@mui/material/colors";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -45,7 +46,7 @@ function ResponsiveAppBar() {
       position="static"
       className="BG"
       sx={{
-        background: "rgba(255, 255, 255, 0.15)",
+        background: "rgba(0, 0, 0, 0.2)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
         boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
@@ -61,7 +62,7 @@ function ResponsiveAppBar() {
               height={45}
             />
           </Box>
-          <Typography
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
@@ -77,7 +78,7 @@ function ResponsiveAppBar() {
             }}
           >
             NSB
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -133,14 +134,14 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
 
-          <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+          {/* <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
             <Image
               src="/image/NSB_Logo.png"
               alt="Logo NSB"
               width={45}
               height={45}
             />
-          </Box>
+          </Box> */}
           <Typography
             variant="h5"
             noWrap
@@ -159,12 +160,25 @@ function ResponsiveAppBar() {
           >
             NSB
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, gap: 2 }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+
+                  transition: "0.3s",
+
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                    boxShadow: "0 8px 20px rgba(0,0,0,0.5)",
+                  },
+                }}
               >
                 {page}
               </Button>
@@ -173,7 +187,11 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar
+                  sx={{ bgcolor: deepOrange[500] }}
+                  // alt="Remy Sharp"
+                  src="/broken-image.jpg"
+                ></Avatar>
               </IconButton>
             </Tooltip>
             <Menu
